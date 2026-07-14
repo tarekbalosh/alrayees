@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+  <!-- PWA -->
+  <link rel="icon" href="assets/images/favicon_icon.png"/>
+  <link rel="apple-touch-icon" href="assets/images/icon-192.png"/>
+  <link rel="manifest" href="manifest.json"/>
+  <meta name="theme-color" content="#123c29"/>
+  <meta name="mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+  <meta name="apple-mobile-web-app-title" content="Al Rayees"/>
+  <title>Al Rayees SDN BHD | International Trading — Vegetable Oils, Grains & Commodities</title>
+  <meta name="description" content="Al Rayees SDN BHD is a premier international trading company based in Malaysia, specializing in vegetable oils, grains, and agricultural inputs. Global trade excellence."/>
+  <meta name="keywords" content="Al Rayees, international trading, Malaysia, vegetable oils, grains, palm oil, soybean oil, fertilizers, agricultural commodities, SDN BHD"/>
+  <link rel="canonical" href="https://www.alrayeesmy.com/"/>
+  <!-- Open Graph -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Al Rayees SDN BHD | International Trading Corporation"/>
+  <meta property="og:description" content="Global trading excellence in vegetable oils, grains, and agricultural inputs."/>
+  <meta property="og:url" content="https://www.alrayeesmy.com/"/>
+  <meta property="og:site_name" content="Al Rayees SDN BHD"/>
+  <!-- Schema -->
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Organization","name":"Al Rayees SDN BHD","url":"https://www.alrayeesmy.com","logo":"https://www.alrayeesmy.com/assets/images/al_rayees_sdn_bhd_logo.xml","contactPoint":{"@type":"ContactPoint","telephone":"+60-11-6820-6810","contactType":"sales","areaServed":"Worldwide"},"address":{"@type":"PostalAddress","streetAddress":"B6-M, Jalan Selaman 1, Dataran Palma","addressLocality":"Ampang","addressRegion":"Selangor","postalCode":"68000","addressCountry":"MY"},"sameAs":["https://wa.me/601168206810"]}
+  </script>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/variables.css"/>
+  <link rel="stylesheet" href="assets/css/reset.css"/>
+  <link rel="stylesheet" href="assets/css/nav-footer.css"/>
+  <link rel="stylesheet" href="assets/css/home.css"/>
+</head>
+<body>
+
+<!-- Page Loader -->
+<div id="page-loader" role="status" aria-label="Loading">
+  <img class="loader-logo" src="assets/images/al_rayees_sdn_bhd_logo.png" alt="Al Rayees SDN BHD" />
+  <div class="loader-bar-track"><div class="loader-bar-fill"></div></div>
+  <p class="loader-text">Loading International Trading Platform</p>
+</div>
+
+<!-- Nav injected by components.js -->
+<div id="nav-placeholder"></div>
+
+<!-- ═══════════════════════════════════════════════════
+     HERO
+════════════════════════════════════════════════════ -->
+<section id="hero" aria-label="Hero section">
+  <canvas id="hero-canvas" aria-hidden="true"></canvas>
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+  <div class="hud-scanline" aria-hidden="true"></div>
+
+  <div class="hero-content container">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <div class="hero-eyebrow">🌐 Malaysia-Based Global Trading Corporation</div>
+        <h1 class="hero-title">
+          AL-RAYEES<br/>
+          World-Class
+          <span class="accent">Commodity Trading</span>
+        </h1>
+        <p class="hero-subtitle">Al Rayees SDN BHD delivers premium vegetable oils, grains, and agricultural inputs to global markets — backed by trust, quality, and decades of international expertise.</p>
+        <div class="hero-buttons">
+          <a href="vegetable-oils.html" class="btn btn-primary btn-lg" id="hero-explore-btn">Explore Products</a>
+          <a href="contact.html" class="btn btn-outline btn-lg" id="hero-contact-btn">Request a Quote</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <span class="hero-stat-value" data-count="50" data-suffix="+">50+</span>
+            <span class="hero-stat-label">Countries Served</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-value" data-count="200" data-suffix="+">200+</span>
+            <span class="hero-stat-label">Product Lines</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-value" data-count="15" data-suffix="yr">15yr</span>
+            <span class="hero-stat-label">Trading Experience</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-globe" aria-hidden="true">
+        <div class="globe-glow"></div>
+        <div class="globe-ring globe-ring-1"></div>
+        <div class="globe-ring globe-ring-2"></div>
+        <div class="globe-ring globe-ring-3"></div>
+        <canvas id="globe-canvas" aria-label="Interactive 3D globe — hover and click active agricultural regions to discover their products"></canvas>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER / MARQUEE -->
+<div class="ticker-bar" aria-label="Al Rayees commodity highlights">
+  <div class="ticker-inner">
+    <span class="ticker-item"><span class="ticker-icon">🫒</span> Vegetable Oils</span>
+    <span class="ticker-item"><span class="ticker-icon">🌾</span> Premium Grains</span>
+    <span class="ticker-item"><span class="ticker-icon">🌱</span> Agricultural Inputs</span>
+    <span class="ticker-item"><span class="ticker-icon">🚢</span> Global Logistics</span>
+    <span class="ticker-item"><span class="ticker-icon">🌍</span> 50+ Countries Served</span>
+    <span class="ticker-item"><span class="ticker-icon">🤝</span> Trusted Partnerships</span>
+    <!-- duplicate set for seamless loop -->
+    <span class="ticker-item"><span class="ticker-icon">🫒</span> Vegetable Oils</span>
+    <span class="ticker-item"><span class="ticker-icon">🌾</span> Premium Grains</span>
+    <span class="ticker-item"><span class="ticker-icon">🌱</span> Agricultural Inputs</span>
+    <span class="ticker-item"><span class="ticker-icon">🚢</span> Global Logistics</span>
+    <span class="ticker-item"><span class="ticker-icon">🌍</span> 50+ Countries Served</span>
+    <span class="ticker-item"><span class="ticker-icon">🤝</span> Trusted Partnerships</span>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     ABOUT SNAPSHOT
+════════════════════════════════════════════════════ -->
+<section id="about" class="about-snapshot section" aria-labelledby="about-heading">
+  <div class="container about-grid">
+    <div class="about-image-wrap reveal reveal-left">
+      <div class="about-slideshow" role="img" aria-label="Al Rayees agricultural commodities — vegetable oils, canola, palm, olives, grains, sunflower, rice, coffee and sugar">
+        <img class="about-slide" src="assets/images/all_v_oil.jpg"    alt="Vegetable oils" loading="lazy"/>
+        <img class="about-slide" src="assets/images/canola.jpg"       alt="Canola" loading="lazy"/>
+        <img class="about-slide" src="assets/images/palm.jpg"         alt="Palm oil" loading="lazy"/>
+        <img class="about-slide" src="assets/images/olives.jpg"       alt="Olives" loading="lazy"/>
+        <img class="about-slide" src="assets/images/mix_grains_2.jpg" alt="Mixed grains" loading="lazy"/>
+        <img class="about-slide" src="assets/images/sun_flower.jpg"   alt="Sunflower" loading="lazy"/>
+        <img class="about-slide" src="assets/images/rice.jpg"         alt="Rice" loading="lazy"/>
+        <img class="about-slide" src="assets/images/coffee.jpg"       alt="Coffee" loading="lazy"/>
+        <img class="about-slide" src="assets/images/sugar.jpg"        alt="Sugar" loading="lazy"/>
+        <span class="about-live-badge"><span class="live-dot"></span> LIVE</span>
+      </div>
+      <div class="about-badge">
+        <span class="about-badge-num" data-count="15" data-suffix="+">15+</span>
+        <span class="about-badge-label">Years of Excellence</span>
+      </div>
+    </div>
+    <div class="about-content reveal reveal-right">
+      <span class="section-label">About Al Rayees</span>
+      <h2 id="about-heading">Bridging Global Markets With Premium Commodities</h2>
+      <p>Al Rayees SDN BHD (Reg. No. 202501016344) is a Malaysian-registered international trading corporation with a global footprint across Asia, the Middle East, Europe, Africa, and the Americas.</p>
+      <p>We specialize in sourcing, trading, and delivering high-quality agricultural commodities, vegetable oils, grains, fertilizers, and industrial raw materials — connecting the world's best producers with discerning international buyers.</p>
+      <div class="about-features">
+        <div class="about-feature">
+          <div class="feature-icon">🔬</div>
+          <div class="feature-text">
+            <h5>International Quality Standards</h5>
+            <p>Every product undergoes rigorous quality verification against ISO, CODEX, and industry-specific international standards.</p>
+          </div>
+        </div>
+        <div class="about-feature">
+          <div class="feature-icon">🚢</div>
+          <div class="feature-text">
+            <h5>Reliable Supply Chain</h5>
+            <p>Robust logistics and supply chain management ensuring timely delivery across all continents.</p>
+          </div>
+        </div>
+        <div class="about-feature">
+          <div class="feature-icon">🤝</div>
+          <div class="feature-text">
+            <h5>Long-Term Partnerships</h5>
+            <p>We build lasting relationships with suppliers and buyers built on trust, transparency, and mutual growth.</p>
+          </div>
+        </div>
+      </div>
+      <a href="contact.html" class="btn btn-navy">Partner With Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     PRODUCT CATEGORIES
+════════════════════════════════════════════════════ -->
+<section class="products-overview section" aria-labelledby="products-heading">
+  <div class="container">
+    <div class="text-center section-title reveal">
+      <span class="section-label">Our Portfolio</span>
+      <h2 id="products-heading">Three Core Commodity Categories</h2>
+      <p style="max-width:580px;margin:var(--space-4) auto 0">From premium vegetable oils to essential agricultural inputs — we trade the commodities that power economies worldwide.</p>
+    </div>
+    <div class="product-cats-grid" style="margin-top:var(--space-12)">
+      <a href="vegetable-oils.html" class="product-cat-card reveal" data-delay="0" aria-label="Vegetable Oils products">
+        <img src="assets/images/all_v_oil.jpg" alt="Vegetable oils including palm oil and soybean oil" loading="lazy"/>
+        <div class="product-cat-overlay">
+          <span class="product-cat-icon">🫒</span>
+          <h3 class="product-cat-name">Vegetable Oils</h3>
+          <span class="product-cat-count">6 Products</span>
+        </div>
+        <div class="product-cat-arrow">→</div>
+      </a>
+      <a href="grains-foodstuffs.html" class="product-cat-card reveal" data-delay="100" aria-label="Grains and Foodstuffs products">
+        <img src="assets/images/mix_grains_3.jpg" alt="Grains including wheat and rice" loading="lazy"/>
+        <div class="product-cat-overlay">
+          <span class="product-cat-icon">🌾</span>
+          <h3 class="product-cat-name">Grains & Foodstuffs</h3>
+          <span class="product-cat-count">9 Products</span>
+        </div>
+        <div class="product-cat-arrow">→</div>
+      </a>
+      <a href="agricultural-inputs.html" class="product-cat-card reveal" data-delay="200" aria-label="Agricultural Inputs products">
+        <img src="assets/images/chemical_fertilizers_2.jpg" alt="Agricultural inputs including fertilizers" loading="lazy"/>
+        <div class="product-cat-overlay">
+          <span class="product-cat-icon">🌱</span>
+          <h3 class="product-cat-name">Agricultural Inputs</h3>
+          <span class="product-cat-count">6 Products</span>
+        </div>
+        <div class="product-cat-arrow">→</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     WHY CHOOSE US
+════════════════════════════════════════════════════ -->
+<section class="why-us section" aria-labelledby="why-heading">
+  <div class="container">
+    <div class="text-center reveal">
+      <span class="section-label">Why Al Rayees</span>
+      <h2 id="why-heading">The Trading Partner You Can Trust</h2>
+    </div>
+    <div class="why-us-grid">
+      <div class="why-card reveal" data-delay="0">
+        <div class="why-icon">🏆</div>
+        <h4>Premium Quality Assurance</h4>
+        <p>Rigorous multi-stage quality control verified against international ISO, CODEX, and industry standards for every shipment.</p>
+      </div>
+      <div class="why-card reveal" data-delay="100">
+        <div class="why-icon">🌍</div>
+        <h4>Global Network</h4>
+        <p>Established partnerships in 50+ countries across Asia, Europe, the Middle East, Africa, and the Americas.</p>
+      </div>
+      <div class="why-card reveal" data-delay="200">
+        <div class="why-icon">🚢</div>
+        <h4>Reliable Logistics</h4>
+        <p>End-to-end supply chain management with flexible shipping terms: FOB, CIF, CFR, DAP, and more.</p>
+      </div>
+      <div class="why-card reveal" data-delay="300">
+        <div class="why-icon">📋</div>
+        <h4>Full Documentation</h4>
+        <p>Complete export documentation including certificates of origin, phytosanitary, and quality certificates.</p>
+      </div>
+      <div class="why-card reveal" data-delay="400">
+        <div class="why-icon">🔒</div>
+        <h4>Compliance & Integrity</h4>
+        <p>Fully registered Malaysian corporation operating with complete legal compliance and transparent business practices.</p>
+      </div>
+      <div class="why-card reveal" data-delay="500">
+        <div class="why-icon">💼</div>
+        <h4>Flexible Trade Terms</h4>
+        <p>Competitive pricing with adaptable payment terms and tailored contracts for long-term supply agreements.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     COMPANY REGISTRATION
+════════════════════════════════════════════════════ -->
+<section id="ssm" class="ssm-section section" aria-labelledby="ssm-heading">
+  <div class="container ssm-inner">
+    <div class="ssm-text reveal reveal-left">
+      <span class="section-label" style="color:var(--gold-300)">Legal & Compliance</span>
+      <h2 id="ssm-heading" style="color:var(--white)">Fully Registered & Compliant</h2>
+      <p>Al Rayees SDN BHD is officially registered with the Companies Commission of Malaysia (Suruhanjaya Syarikat Malaysia — SSM) under registration number <strong style="color:var(--gold-300)">202501016344 (1618413-W)</strong>.</p>
+      <p>We operate with complete legal transparency and regulatory compliance, giving our global partners full confidence in every transaction.</p>
+      <div style="display:flex;gap:var(--space-4);margin-top:var(--space-6);flex-wrap:wrap">
+        <a href="assets/images/al_rayess_ssm.png" target="_blank" rel="noopener" class="btn btn-primary">View Registration</a>
+        <a href="contact.html" class="btn btn-outline">Partner With Us</a>
+      </div>
+    </div>
+    <div class="ssm-doc-preview reveal reveal-right">
+      <img src="assets/images/al_rayess_ssm.png" alt="Al Rayees SDN BHD company registration document from SSM Malaysia" loading="lazy"/>
+      <div class="ssm-doc-overlay">
+        <a href="assets/images/al_rayess_ssm.png" target="_blank" rel="noopener" class="btn btn-primary">View Full Document</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     GLOBAL REACH
+════════════════════════════════════════════════════ -->
+<section id="global" class="global-reach section" aria-labelledby="global-heading">
+  <div class="container text-center">
+    <span class="section-label">Global Footprint</span>
+    <h2 id="global-heading">Trading Across 50+ Countries</h2>
+    <p style="max-width:560px;margin:var(--space-4) auto var(--space-8)">Our commodities reach buyers and partners across every major trading region in the world.</p>
+    <div class="countries-grid reveal">
+      <div class="country-chip"><span class="flag">🇲🇾</span> Malaysia</div>
+      <div class="country-chip"><span class="flag">🇦🇪</span> UAE</div>
+      <div class="country-chip"><span class="flag">🇸🇦</span> Saudi Arabia</div>
+      <div class="country-chip"><span class="flag">🇮🇳</span> India</div>
+      <div class="country-chip"><span class="flag">🇨🇳</span> China</div>
+      <div class="country-chip"><span class="flag">🇮🇩</span> Indonesia</div>
+      <div class="country-chip"><span class="flag">🇵🇰</span> Pakistan</div>
+      <div class="country-chip"><span class="flag">🇧🇩</span> Bangladesh</div>
+      <div class="country-chip"><span class="flag">🇪🇬</span> Egypt</div>
+      <div class="country-chip"><span class="flag">🇳🇬</span> Nigeria</div>
+      <div class="country-chip"><span class="flag">🇹🇷</span> Turkey</div>
+      <div class="country-chip"><span class="flag">🇵🇭</span> Philippines</div>
+      <div class="country-chip"><span class="flag">🇻🇳</span> Vietnam</div>
+      <div class="country-chip"><span class="flag">🇰🇪</span> Kenya</div>
+      <div class="country-chip"><span class="flag">🇩🇪</span> Germany</div>
+      <div class="country-chip"><span class="flag">🇬🇧</span> UK</div>
+      <div class="country-chip"><span class="flag">🇳🇱</span> Netherlands</div>
+      <div class="country-chip"><span class="flag">🇧🇷</span> Brazil</div>
+      <div class="country-chip"><span class="flag">🇿🇦</span> South Africa</div>
+      <div class="country-chip"><span class="flag">🇦🇺</span> Australia</div>
+    </div>
+    <a href="contact.html" class="btn btn-navy" style="margin-top:var(--space-10)">Enquire for Your Country</a>
+  </div>
+</section>
+
+
+<!-- Footer injected by components.js -->
+<div id="footer-placeholder"></div>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js" defer></script>
+<script src="assets/js/components.js"></script>
+<script src="assets/js/main.js" defer></script>
+<script src="assets/js/globe.js" defer></script>
+
+<!-- Stars background -->
+<script>
+(function initStars() {
+  const canvas = document.getElementById('hero-canvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  function resize() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+  resize();
+  window.addEventListener('resize', resize);
+  const stars = Array.from({length: 200}, () => ({
+    x: Math.random(), y: Math.random(),
+    r: Math.random() * 1.5 + 0.3,
+    a: Math.random(),
+    speed: Math.random() * 0.003 + 0.001,
+  }));
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    stars.forEach(s => {
+      s.a += s.speed;
+      const alpha = (Math.sin(s.a) + 1) / 2 * 0.7 + 0.1;
+      ctx.save();
+      ctx.globalAlpha = alpha;
+      ctx.fillStyle = '#ffffff';
+      ctx.beginPath();
+      ctx.arc(s.x * canvas.width, s.y * canvas.height, s.r, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.restore();
+    });
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+</script>
+</body>
+</html>

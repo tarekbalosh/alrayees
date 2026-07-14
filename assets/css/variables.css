@@ -1,0 +1,175 @@
+/* ============================================================
+   AL RAYEES SDN BHD — Design Tokens
+   ============================================================ */
+
+:root {
+  /* ── Brand Colors ──
+     NOTE: the `--navy-*` token names are retained for cascade stability,
+     but now hold the Deep Forest Green → Verdant Green structural scale. */
+  --navy-900: #0a2419;  /* Deep Forest Green (deepest) */
+  --navy-800: #0e2e20;
+  --navy-700: #123c29;  /* Deep Forest Green */
+  --navy-600: #184d34;
+  --navy-500: #1f6342;
+  --navy-400: #2c7d52;  /* Verdant Green */
+  --navy-300: #3e9a64;  /* Verdant Green (light) */
+  --navy-200: #6fbb8c;
+  --navy-100: #aedcc1;
+  --navy-50:  #e7f4ec;
+
+  /* `--gold-*` scale: Amber Gold → Sunny Yellow (CTAs / Actions) */
+  --gold-900: #6b4a00;
+  --gold-800: #8a6000;
+  --gold-700: #b07c00;
+  --gold-600: #d29400;
+  --gold-500: #e8a317;  /* Amber Gold */
+  --gold-400: #f5b82a;
+  --gold-300: #ffc94d;  /* Amber → Sunny */
+  --gold-200: #ffd957;  /* Sunny Yellow */
+  --gold-100: #ffe88f;
+  --gold-50:  #fff8e0;
+
+  --green-700: #123c29;
+  --green-500: #2c7d52;
+  --green-300: #3e9a64;
+
+  /* ── Neon Accent (page frame + nav CTA) ── */
+  --neon:       #00ff9d;
+  --neon-rgb:   0,255,157;
+  --neon-dark:  #061a12;
+
+  --cream:     #f5f3ec;  /* Alabaster White */
+  --off-white: #fffdf5;  /* Ivory White */
+  --alabaster: #f5f3ec;  /* Alabaster White */
+  --ivory:     #fffdf5;  /* Ivory White */
+  --amber-gold:  #e8a317;
+  --sunny-yellow:#ffd957;
+  --forest-deep: #0a2419;
+  --verdant:     #2c7d52;
+  --white:     #ffffff;
+  --black:     #000000;
+
+  /* ── Semantic ── */
+  --color-primary:        var(--gold-500);
+  --color-primary-dark:   var(--gold-700);
+  --color-primary-light:  var(--gold-400);
+  
+  --color-accent-light:   var(--gold-300);
+  --color-accent-dark:    var(--gold-700);
+  --color-bg:             var(--ivory);
+  --color-surface:        var(--white);
+  --color-text:           #14241b;
+  --color-text-muted:     #3c5042;
+  --color-text-light:     #6a8073;
+  --color-border:         rgba(10, 36, 25, 0.12);
+  --color-border-gold:    rgba(232, 163, 23, 0.38);
+
+  /* ── Gradients ── */
+  --grad-navy:   linear-gradient(135deg, var(--navy-900) 0%, var(--navy-600) 100%);
+  --grad-gold:   linear-gradient(135deg, var(--gold-600) 0%, var(--gold-300) 100%);
+  --grad-hero:   linear-gradient(135deg, #0a2419 0%, #123c29 50%, #0e2e20 100%);
+  --grad-glass:  linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%);
+  --grad-card:   linear-gradient(180deg, rgba(8,30,20,0) 0%, rgba(8,30,20,0.85) 100%);
+
+  /* ── Typography ── */
+  --font-heading: 'Outfit', 'Inter', sans-serif;
+  --font-body:    'Inter', 'Helvetica Neue', sans-serif;
+  --font-mono:    'JetBrains Mono', monospace;
+  --font-display: 'Outfit', 'Inter', sans-serif;
+
+  --text-xs:   0.75rem;
+  --text-sm:   0.875rem;
+  --text-base: 1rem;
+  --text-lg:   1.125rem;
+  --text-xl:   1.25rem;
+  --text-2xl:  1.5rem;
+  --text-3xl:  1.875rem;
+  --text-4xl:  2.25rem;
+  --text-5xl:  3rem;
+  --text-6xl:  3.75rem;
+  --text-7xl:  4.5rem;
+
+  --leading-tight:  1.2;
+  --leading-snug:   1.4;
+  --leading-normal: 1.6;
+  --leading-relaxed:1.8;
+
+  --tracking-tight:  -0.025em;
+  --tracking-normal: 0em;
+  --tracking-wide:   0.05em;
+  --tracking-wider:  0.1em;
+  --tracking-widest: 0.2em;
+
+  /* ── Spacing ── */
+  --space-1:  0.25rem;
+  --space-2:  0.5rem;
+  --space-3:  0.75rem;
+  --space-4:  1rem;
+  --space-5:  1.25rem;
+  --space-6:  1.5rem;
+  --space-8:  2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+
+  /* ── Layout ── */
+  --container-sm:  640px;
+  --container-md:  768px;
+  --container-lg:  1024px;
+  --container-xl:  1280px;
+  --container-2xl: 1440px;
+  --container-pad: clamp(1rem, 5vw, 3rem);
+
+  /* ── Border Radius ── */
+  --radius-sm:   0.25rem;
+  --radius-md:   0.5rem;
+  --radius-lg:   1rem;
+  --radius-xl:   1.5rem;
+  --radius-2xl:  2rem;
+  --radius-full: 9999px;
+
+  /* ── Shadows ── */
+  --shadow-sm:   0 1px 3px rgba(8,30,20,0.12), 0 1px 2px rgba(8,30,20,0.08);
+  --shadow-md:   0 4px 16px rgba(8,30,20,0.15), 0 2px 6px rgba(8,30,20,0.1);
+  --shadow-lg:   0 10px 40px rgba(8,30,20,0.2), 0 4px 12px rgba(8,30,20,0.12);
+  --shadow-xl:   0 20px 60px rgba(8,30,20,0.3), 0 8px 24px rgba(8,30,20,0.18);
+  --shadow-gold: 0 4px 20px rgba(232,163,23,0.32);
+  --shadow-glow: 0 0 40px rgba(232,163,23,0.15), 0 0 80px rgba(10,36,25,0.4);
+
+  /* ── Transitions ── */
+  --ease-out:   cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in:    cubic-bezier(0.7, 0, 0.84, 1);
+  --ease-inout: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-spring:cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  --duration-fast:   150ms;
+  --duration-base:   300ms;
+  --duration-slow:   500ms;
+  --duration-slower: 800ms;
+
+  /* ── Z-index ── */
+  --z-below:   -1;
+  --z-base:     0;
+  --z-raised:   10;
+  --z-dropdown: 100;
+  --z-sticky:   200;
+  --z-overlay:  300;
+  --z-modal:    400;
+  --z-toast:    500;
+  --z-neon-frame: 9000;
+
+  /* ── Nav ── */
+  --nav-height: 130px;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --nav-height: 90px;
+    --text-5xl: 2.5rem;
+    --text-6xl: 3rem;
+    --text-7xl: 3.5rem;
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__Claude_Preview__preview_start",
+      "PowerShell($n=\\(Get-Command node -ErrorAction SilentlyContinue\\); if\\($n\\){Write-Host \"node: $\\($n.Source\\)\"}; $npx=\\(Get-Command npx -ErrorAction SilentlyContinue\\); if\\($npx\\){Write-Host \"npx: $\\($npx.Source\\)\"}; $py=\\(Get-Command py -ErrorAction SilentlyContinue\\); if\\($py\\){Write-Host \"py: $\\($py.Source\\)\"})",
+      "Bash(cat package.json)",
+      "Bash(cat requirements.txt)",
+      "Bash(cat Makefile)",
+      "PowerShell(Add-Type -AssemblyName System.Drawing; $img = [System.Drawing.Image]::FromFile\\(\"D:\\\\PAT_workshop\\\\alrayess_web_2026\\\\assets\\\\images\\\\favicon_icon.png\"\\); \"$\\($img.Width\\)x$\\($img.Height\\)\"; $img.Dispose\\(\\))"
+    ]
+  }
+}

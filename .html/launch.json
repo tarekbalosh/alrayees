@@ -1,0 +1,14 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "Al Rayees — Static Dev Server",
+      "runtimeExecutable": "C:\\Program Files\\Git\\bin\\bash.exe",
+      "runtimeArgs": [
+        "-c",
+        "cd '/d/PAT_workshop/alrayess_web_2026' && python3 -m http.server 5500"
+      ],
+      "port": 5500
+    }
+  ]
+}
