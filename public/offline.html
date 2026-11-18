@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#123c29" />
+  <link rel="icon" href="/assets/images/favicon_icon.png" />
+  <title>Offline | Al Rayees SDN BHD</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: radial-gradient(circle at top right, #184d34 0%, #0a2419 65%);
+      color: #f5f3ec;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      text-align: center;
+    }
+    .offline-card {
+      max-width: 440px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 24px;
+      padding: 40px 28px;
+      box-shadow: 0 24px 48px rgba(0, 0, 0, 0.35);
+    }
+    .offline-logo {
+      height: 76px;
+      width: auto;
+      margin: 0 auto 20px;
+      display: block;
+    }
+    .offline-tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #ffc94d;
+      margin-bottom: 10px;
+    }
+    h1 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 12px;
+    }
+    p {
+      font-size: 0.96rem;
+      line-height: 1.65;
+      color: #aedcc1;
+      margin-bottom: 28px;
+    }
+    .offline-actions {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn-retry {
+      cursor: pointer;
+      border: none;
+      border-radius: 50px;
+      padding: 12px 26px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      background: linear-gradient(135deg, #e8a317, #ffc94d);
+      color: #0a2419;
+    }
+    .btn-home {
+      display: inline-block;
+      border-radius: 50px;
+      padding: 12px 24px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+    }
+  </style>
+</head>
+<body>
+  <main class="offline-card">
+    <img src="/assets/images/al_rayees_sdn_bhd_logo.png" alt="Al Rayees SDN BHD" class="offline-logo" />
+    <span class="offline-tag">Connection Lost</span>
+    <h1>You Are Currently Offline</h1>
+    <p>Please check your internet connection and try again. Previously visited pages remain available offline.</p>
+    <div class="offline-actions">
+      <button type="button" class="btn-retry" onclick="window.location.reload()">Try Again</button>
+      <a href="/" class="btn-home">Home</a>
+    </div>
+  </main>
+</body>
+</html>

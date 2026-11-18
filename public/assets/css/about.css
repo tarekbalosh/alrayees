@@ -1,0 +1,160 @@
+/* ============================================================
+   AL RAYEES SDN BHD — About Us Page Styles
+   ============================================================ */
+
+/* ─── WHY CHOOSE US ──────────────────────────────── */
+.about-why { background: var(--ivory); }
+.about-why .section-title { margin-bottom: var(--space-10); }
+.about-why-lead {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.about-why-lead p {
+  font-size: clamp(var(--text-base), 1.4vw, var(--text-lg));
+  line-height: var(--leading-relaxed);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-5);
+  text-align: center;
+}
+.about-why-lead p strong { color: var(--color-text); }
+
+/* ─── VISION & MISSION ───────────────────────────── */
+.vm-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+  margin-top: var(--space-12);
+}
+.vm-card {
+  position: relative;
+  padding: var(--space-8);
+  background: var(--grad-navy);
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(232,163,23,0.2);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+.vm-card::before {
+  content: '';
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 4px;
+  background: var(--grad-gold);
+}
+.vm-icon {
+  width: 56px; height: 56px;
+  border-radius: var(--radius-lg);
+  background: var(--grad-gold);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 26px;
+  margin-bottom: var(--space-5);
+  box-shadow: var(--shadow-gold);
+}
+.vm-card h3 {
+  color: var(--white);
+  font-family: var(--font-display);
+  margin-bottom: var(--space-3);
+}
+.vm-card p {
+  color: rgba(255,255,255,0.82);
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+  margin: 0;
+}
+@media (max-width: 768px) {
+  .vm-grid { grid-template-columns: 1fr; }
+}
+
+/* ─── CEO MESSAGE ────────────────────────────────── */
+.ceo-message { background: var(--cream); }
+.ceo-grid {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: var(--space-12);
+  align-items: start;
+}
+
+.ceo-portrait-wrap {
+  position: relative;
+  position: sticky;
+  top: calc(var(--nav-height) + var(--space-6));
+}
+.ceo-portrait {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+  border: 1px solid var(--color-border-gold);
+}
+.ceo-portrait img {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+.ceo-portrait::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 55%, rgba(10,36,25,0.55) 100%);
+  pointer-events: none;
+}
+.ceo-name-card {
+  margin-top: var(--space-5);
+  padding: var(--space-5) var(--space-6);
+  background: var(--grad-navy);
+  border-radius: var(--radius-lg);
+  border-left: 4px solid var(--gold-500);
+  box-shadow: var(--shadow-md);
+}
+.ceo-name-card .ceo-name {
+  color: var(--white);
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  letter-spacing: var(--tracking-wide);
+  display: block;
+}
+.ceo-name-card .ceo-title {
+  color: var(--gold-300);
+  font-size: var(--text-sm);
+  letter-spacing: var(--tracking-wide);
+  display: block;
+  margin-top: 4px;
+}
+
+.ceo-quote {
+  position: relative;
+  padding-left: var(--space-8);
+}
+.ceo-quote::before {
+  content: '\201C';
+  position: absolute;
+  left: -8px;
+  top: -28px;
+  font-family: var(--font-heading);
+  font-size: 8rem;
+  line-height: 1;
+  color: var(--gold-500);
+  opacity: 0.28;
+}
+.ceo-quote p {
+  font-family: var(--font-body);
+  font-size: clamp(var(--text-base), 1.5vw, var(--text-lg));
+  line-height: var(--leading-relaxed);
+  color: var(--color-text);
+  margin-bottom: var(--space-5);
+}
+.ceo-quote p:first-of-type {
+  font-family: var(--font-display);
+  font-size: clamp(var(--text-lg), 1.8vw, var(--text-xl));
+  color: var(--navy-700);
+  font-weight: 500;
+}
+
+@media (max-width: 900px) {
+  .ceo-grid { grid-template-columns: 1fr; gap: var(--space-8); }
+  .ceo-portrait-wrap { position: relative; top: 0; max-width: 260px; margin: 0 auto; }
+  .ceo-quote { padding-left: var(--space-6); }
+}

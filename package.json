@@ -1,0 +1,24 @@
+{
+  "name": "alrayess_web_2026",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tarekbalosh/alrayees.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tarekbalosh/alrayees/issues"
+  },
+  "homepage": "https://github.com/tarekbalosh/alrayees#readme",
+  "dependencies": {
+    "next": "16.4.6",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  }
+}

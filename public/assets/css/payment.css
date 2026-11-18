@@ -1,0 +1,315 @@
+/* Payment Section & Success Page Styles */
+
+.payment-section {
+    position: relative;
+    overflow: hidden;
+    padding: var(--space-16) 0;
+}
+
+.payment-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    padding: var(--space-10) var(--space-8);
+    max-width: 500px;
+    margin: 0 auto;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease;
+}
+
+.payment-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3), 0 0 30px rgba(76, 175, 80, 0.15);
+    border-color: rgba(76, 175, 80, 0.4);
+}
+
+.payment-icon-wrapper {
+    width: 80px;
+    height: 80px;
+    background: rgba(76, 175, 80, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--space-6);
+    color: #4CAF50;
+    position: relative;
+}
+
+.payment-icon-wrapper::after {
+    content: '';
+    position: absolute;
+    inset: -10px;
+    border: 2px dashed rgba(76, 175, 80, 0.3);
+    border-radius: 50%;
+    animation: spin 15s linear infinite;
+}
+
+@keyframes spin {
+    100% { transform: rotate(360deg); }
+}
+
+.payment-card h3 {
+    color: var(--navy-700);
+    margin-bottom: var(--space-4);
+    font-size: 1.75rem;
+    font-family: var(--font-heading);
+}
+
+.payment-card p {
+    color: var(--gray-300);
+    margin-bottom: var(--space-8);
+    line-height: 1.6;
+    font-size: 1.05rem;
+}
+
+.btn-payment {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: linear-gradient(135deg, #4CAF50, #45a049);
+    color: white !important;
+    font-weight: 600;
+    font-size: 1.125rem;
+    padding: 16px 32px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.25);
+    width: 100%;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+}
+
+.btn-payment:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(76, 175, 80, 0.4);
+    background: linear-gradient(135deg, #45a049, #388E3C);
+}
+
+/* Success Page Styles */
+.success-page-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--navy-950, #060f1c);
+    padding: var(--space-4);
+    position: relative;
+    overflow: hidden;
+}
+
+.success-page-wrapper::before,
+.success-page-wrapper::after {
+    content: '';
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.15;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.success-page-wrapper::before {
+    background: #4CAF50;
+    top: -200px;
+    left: -200px;
+}
+
+.success-page-wrapper::after {
+    background: var(--gold-500, #d4af37);
+    bottom: -200px;
+    right: -200px;
+}
+
+.success-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 28px;
+    padding: var(--space-12) var(--space-8);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    animation: slideUpFade 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slideUpFade {
+    from { opacity: 0; transform: translateY(40px) scale(0.98); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Animated Checkmark */
+.success-checkmark {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    display: block;
+    stroke-width: 2.5;
+    stroke: #4CAF50;
+    stroke-miterlimit: 10;
+    margin: 0 auto var(--space-8);
+    box-shadow: inset 0px 0px 0px #4CAF50;
+    animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+}
+
+.success-checkmark__circle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 2.5;
+    stroke-miterlimit: 10;
+    stroke: #4CAF50;
+    fill: none;
+    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.success-checkmark__check {
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+@keyframes stroke {
+    100% { stroke-dashoffset: 0; }
+}
+@keyframes scale {
+    0%, 100% { transform: none; }
+    50% { transform: scale3d(1.1, 1.1, 1); }
+}
+@keyframes fill {
+    100% { box-shadow: inset 0px 0px 0px 45px rgba(76, 175, 80, 0.1); }
+}
+
+.success-card h1 {
+    color: var(--white);
+    margin-bottom: var(--space-4);
+    font-size: 2.5rem;
+    font-family: var(--font-heading);
+}
+
+.success-card p {
+    color: var(--gray-300);
+    margin-bottom: var(--space-10);
+    line-height: 1.6;
+    font-size: 1.125rem;
+}
+
+.btn-home {
+    display: inline-block;
+    background: transparent;
+    color: var(--white);
+    font-weight: 600;
+    padding: 14px 36px;
+    border-radius: 50px;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    font-family: 'Inter', sans-serif;
+}
+
+.btn-home:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+}
+
+/* ── Payment "Coming Soon" state ─────────────────────── */
+.payment-soon-wrap {
+    position: relative;
+    display: block;
+    cursor: not-allowed;
+    border-radius: 50px;
+    outline: none;
+}
+
+.payment-soon-wrap:focus-visible {
+    box-shadow: 0 0 0 3px rgba(232, 163, 23, 0.55);
+}
+
+.btn-payment.is-disabled,
+.btn-payment.is-disabled:hover {
+    opacity: 0.55;
+    cursor: not-allowed;
+    pointer-events: none;
+    box-shadow: none;
+    transform: none;
+    background: linear-gradient(135deg, #4CAF50, #45a049);
+}
+
+.payment-soon-badge {
+    position: absolute;
+    top: -11px;
+    inset-inline-end: 22px;
+    z-index: 2;
+    background: linear-gradient(135deg, var(--gold-500), var(--gold-300));
+    color: var(--navy-900);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    line-height: 1;
+    padding: 6px 12px;
+    border-radius: 50px;
+    box-shadow: 0 2px 8px rgba(232, 163, 23, 0.35);
+    pointer-events: none;
+}
+
+.payment-soon-tip {
+    position: absolute;
+    bottom: calc(100% + 18px);
+    left: 50%;
+    z-index: 5;
+    width: max-content;
+    max-width: 100%;
+    box-sizing: border-box;
+    background: var(--navy-900);
+    color: var(--white);
+    border: 1px solid rgba(232, 163, 23, 0.35);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    line-height: 1.7;
+    text-align: center;
+    padding: 10px 14px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-50%, 6px);
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+    pointer-events: none;
+}
+
+.payment-soon-tip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: var(--navy-900);
+}
+
+.payment-soon-tip.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 0);
+}
+
+.payment-soon-note {
+    margin-top: var(--space-4);
+    font-size: 0.85rem;
+    line-height: 1.75;
+    text-align: center;
+    color: var(--navy-700);
+    opacity: 0.78;
+}
